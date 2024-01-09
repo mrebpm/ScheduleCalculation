@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:drools="http://www.jboss.org/drools" id="_OJhMQK7bEe6zK9HrY6qaIg" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
-  <bpmn2:process id="ScheduleCalculation.Sequential" drools:packageName="com.dev.schedulecalculation" drools:version="1.0" drools:adHoc="false" name="Sequential" isExecutable="true" processType="Public"/>
-  <bpmndi:BPMNDiagram id="_OJhzUK7bEe6zK9HrY6qaIg">
-    <bpmndi:BPMNPlane id="_OJhzUa7bEe6zK9HrY6qaIg" bpmnElement="ScheduleCalculation.Sequential"/>
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:drools="http://www.jboss.org/drools" id="_cM8qwK7bEe6zK9HrY6qaIg" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+  <bpmn2:itemDefinition id="_processInputDataItem" structureRef="com.dev.schedulecalculation.ProcessInputData"/>
+  <bpmn2:process id="ScheduleCalculation.Sequential" drools:packageName="com.dev.schedulecalculation" drools:version="1.0" drools:adHoc="false" name="Sequential" isExecutable="true" processType="Public">
+    <bpmn2:extensionElements>
+      <drools:import name="com.dev.schedulecalculation.ProcessInputData"/>
+    </bpmn2:extensionElements>
+    <bpmn2:property id="processInputData" itemSubjectRef="_processInputDataItem" name="processInputData">
+      <bpmn2:extensionElements>
+        <drools:metaData name="customTags">
+          <drools:metaValue><![CDATA[required,input]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:property>
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram id="_cM8qwa7bEe6zK9HrY6qaIg">
+    <bpmndi:BPMNPlane id="_cM8qwq7bEe6zK9HrY6qaIg" bpmnElement="ScheduleCalculation.Sequential"/>
   </bpmndi:BPMNDiagram>
-  <bpmn2:relationship id="_OJhzUq7bEe6zK9HrY6qaIg" type="BPSimData">
+  <bpmn2:relationship id="_cM8qw67bEe6zK9HrY6qaIg" type="BPSimData">
     <bpmn2:extensionElements>
       <bpsim:BPSimData>
         <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
@@ -12,7 +24,7 @@
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_OJhMQK7bEe6zK9HrY6qaIg</bpmn2:source>
-    <bpmn2:target>_OJhMQK7bEe6zK9HrY6qaIg</bpmn2:target>
+    <bpmn2:source>_cM8qwK7bEe6zK9HrY6qaIg</bpmn2:source>
+    <bpmn2:target>_cM8qwK7bEe6zK9HrY6qaIg</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>
